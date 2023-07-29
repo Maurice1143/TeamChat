@@ -6,7 +6,6 @@ import de.maurice.teamchat.Commands.CommandHandler;
 import de.maurice.teamchat.Listener.ChatListener;
 import de.maurice.teamchat.Manager.TeamChatManager;
 import org.bukkit.Bukkit;
-import org.bukkit.command.Command;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -43,8 +42,8 @@ public class Main extends JavaPlugin {
   }
 
   public void registerCommands() {
-    getCommand("teamchat").setExecutor(new CommandHandler());
-    getCommand("leadchat").setExecutor(new CommandHandler());
+      getCommand("teamchat").setExecutor(new CommandHandler());
+      getCommand("leadchat").setExecutor(new CommandHandler());
   }
 
   public static Main getInstance() {

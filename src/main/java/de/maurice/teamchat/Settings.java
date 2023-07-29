@@ -30,9 +30,9 @@ public class Settings {
     }
 
     public static String getToggleMessage(String type) {
-        if (type == "team") {
+        if (type.equals("team")) {
             return teamChatToggleMessage;
-        } else if (type == "lead") {
+        } else if (type.equals("lead")) {
             return leadChatToggleMessage;
         }
         return "Toggled auto chat";
@@ -40,16 +40,12 @@ public class Settings {
 
 
     public static String getPattern(String type) {
-        if (type == "team") {
+        if (type.equals("team")) {
             return teamChatPattern;
-        } else if (type == "lead") {
+        } else if (type.equals("lead")) {
             return leadChatPattern;
         }
         return "[Staff]§r {DISPLAY_NAME}: {MESSAGE}";
-    }
-
-    public static Settings getInstance() {
-        return instance;
     }
 
 }

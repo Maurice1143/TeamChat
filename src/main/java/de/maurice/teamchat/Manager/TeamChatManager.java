@@ -2,6 +2,7 @@ package de.maurice.teamchat.Manager;
 
 import de.maurice.teamchat.Utils;
 import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 
 import java.util.ArrayList;
@@ -10,15 +11,15 @@ import java.util.List;
 
 public class TeamChatManager {
     private static TeamChatManager instance;
-    private List<Player> teamAutoChatEnabled = new LinkedList<>();
-    private List<Player> leadAutoChatEnabled = new LinkedList<>();
+    private final List<Player> teamAutoChatEnabled = new LinkedList<>();
+    private final List<Player> leadAutoChatEnabled = new LinkedList<>();
 
     public TeamChatManager() {
         instance = this;
     }
 
     public void sendMessage(Player player, String message, String type) {
-        String formatted = Utils.formatMessage(player, message, type);
+        String formatted = ChatColor.translateAlternateColorCodes('&', Utils.formatMessage(player, message, type));
         for (Player p : getMessageReceiver(type)) {
             p.sendMessage(formatted);
         }
