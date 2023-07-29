@@ -1,10 +1,6 @@
 package de.maurice.teamchat;
 
-import de.maurice.teamchat.Manager.TeamChatManager;
 import org.bukkit.configuration.file.FileConfiguration;
-import org.bukkit.entity.Player;
-
-import javax.swing.*;
 
 public class Settings {
     private static FileConfiguration config;
@@ -35,7 +31,7 @@ public class Settings {
     }
 
     public static String getToggleMessage(String type, boolean state) {
-        if (state == true) {
+        if (state) {
             if (type.equals("team")) {
                 return teamChatToggleEnabledMessage;
             } else if (type.equals("lead")) {

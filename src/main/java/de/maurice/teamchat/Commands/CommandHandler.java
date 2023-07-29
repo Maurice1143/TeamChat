@@ -3,8 +3,6 @@ package de.maurice.teamchat.Commands;
 import com.google.common.base.Joiner;
 import de.maurice.teamchat.Manager.TeamChatManager;
 import de.maurice.teamchat.Settings;
-import net.kyori.adventure.text.Component;
-import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;

@@ -1,7 +1,6 @@
 package de.maurice.teamchat.Manager;
 
 import de.maurice.teamchat.Utils;
-import net.kyori.adventure.text.Component;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
