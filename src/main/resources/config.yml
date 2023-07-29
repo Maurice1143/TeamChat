@@ -5,9 +5,11 @@
 
 TeamChat:
   pattern: "§7[§bTeam§7]§r {DISPLAY_NAME}: {MESSAGE}"
-  toggleMessage: "Toggled auto chat for TeamChat"
+  toggleEnabledMessage: "Enabled auto chat for TeamChat"
+  toggleDisabledMessage: "Disabled auto chat for TeamChat"
 
 LeadChat:
   pattern: "§7[§cLeitung§7]§r {DISPLAY_NAME}: {MESSAGE}"
-  toggleMessage: "Toggled auto chat for LeadChat"
+  toggleEnabledMessage: "Enabled auto chat for LeadChat"
+  toggleDisabledMessage: "Disabled auto chat for LeadChat"
 

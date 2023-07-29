@@ -3,6 +3,8 @@ package de.maurice.teamchat.Commands;
 import com.google.common.base.Joiner;
 import de.maurice.teamchat.Manager.TeamChatManager;
 import de.maurice.teamchat.Settings;
+import net.kyori.adventure.text.Component;
+import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -21,8 +23,8 @@ public class CommandHandler implements CommandExecutor {
             String type = (command.getName().equals("teamchat")) ? "team" : "lead";
             if (args.length == 0) {
                 if (tcm.hasChatPermission(player, type)) {
-                    tcm.toggleAutoChat(player, type);
-                    sender.sendMessage(Settings.getToggleMessage(type));
+                    boolean state = tcm.toggleAutoChat(player, type);
+                    sender.sendMessage(Settings.getToggleMessage(type, state));
                     return true;
                 }
             }
@@ -32,6 +34,10 @@ public class CommandHandler implements CommandExecutor {
                 tcm.sendMessage(player, message, type);
                 return true;
             }
+        } else if (command.getName().equals("teamchatreload") && args.length == 0) {
+            Settings.reloadConfig();
+            sender.sendMessage("§7[§bTeamChat-Plugin§7] §6Die Config wurde erfolgreich neu geladen.");
+            return true;
         }
 
         return false;

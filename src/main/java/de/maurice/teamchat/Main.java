@@ -44,6 +44,7 @@ public class Main extends JavaPlugin {
   public void registerCommands() {
       getCommand("teamchat").setExecutor(new CommandHandler());
       getCommand("leadchat").setExecutor(new CommandHandler());
+      getCommand("teamchatreload").setExecutor(new CommandHandler());
   }
 
   public static Main getInstance() {

@@ -1,6 +1,7 @@
 package de.maurice.teamchat.Manager;
 
 import de.maurice.teamchat.Utils;
+import net.kyori.adventure.text.Component;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
@@ -34,12 +35,24 @@ public class TeamChatManager {
         return false;
     }
 
-    public void toggleAutoChat(Player player, String type) {
+    public boolean toggleAutoChat(Player player, String type) {
+        boolean state = false;
         if (type.equals("team")) {
-            boolean temp = teamAutoChatEnabled.contains(player) ? teamAutoChatEnabled.remove(player) : teamAutoChatEnabled.add(player);
+            if (teamAutoChatEnabled.contains(player)) {
+                teamAutoChatEnabled.remove(player);
+            } else {
+                teamAutoChatEnabled.add(player);
+                state = true;
+            }
         } else if (type.equals("lead")) {
-            boolean temp = leadAutoChatEnabled.contains(player) ? leadAutoChatEnabled.remove(player) : leadAutoChatEnabled.add(player);
+            if (leadAutoChatEnabled.contains(player)) {
+                leadAutoChatEnabled.remove(player);
+            } else {
+                leadAutoChatEnabled.add(player);
+                state = true;
+            }
         }
+        return state;
     }
 
     public boolean hasChatPermission(Player player, String type) {

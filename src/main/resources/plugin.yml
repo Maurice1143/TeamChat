@@ -12,14 +12,21 @@ commands:
       - tc
       - tchat
     permission: "teamchat.chat.team"
-    usage: "/<command> <message>\n/<command> to toggle chat"
+    usage: "Usage: /<command> <message>\nUsage: /<command> to toggle chat"
   leadchat:
     description: "Write in Leadchat"
     aliases:
       - lc
       - lchat
     permission: "teamchat.chat.lead"
-    usage: "/<command> <message>\n/<command> to toggle chat"
+    usage: "Usage: /<command> <message>\nUsage: /<command> to toggle chat"
+  teamchatreload:
+    description: "Reloads the config"
+    aliases:
+      - tcreload
+      - tchatreload
+    permission: "teamchat.reload"
+    usage: "Usage: /<command>"
 
 
 permissions:
@@ -30,4 +37,6 @@ permissions:
   teamchat.receive.team:
     default: op
   teamchat.receive.lead:
+    default: op
+  teamchat.reload:
     default: op
