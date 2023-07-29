@@ -1,0 +1,33 @@
+name: TeamChat
+main: de.maurice.teamchat.Main
+version: 1
+api-version: 1.19
+author: Maurice
+website: www.exo-world.de
+
+commands:
+  teamchat:
+    description: "Write in Teamchat"
+    aliases:
+      - tc
+      - tchat
+    permission: "teamchat.chat.team"
+    usage: "/<command> <message>\n/<command> to toggle chat"
+  leadchat:
+    description: "Write in Leadchat"
+    aliases:
+      - lc
+      - lchat
+    permission: "teamchat.chat.lead"
+    usage: "/<command> <message>\n/<command> to toggle chat"
+
+
+permissions:
+  teamchat.chat.team:
+    default: op
+  teamchat.chat.lead:
+    default: op
+  teamchat.receive.team:
+    default: op
+  teamchat.receive.lead:
+    default: op

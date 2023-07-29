@@ -1,0 +1,13 @@
+# Placeholder
+# {DISPLAY_NAME}
+# {USERNAME}
+# {MESSAGE}
+
+TeamChat:
+  pattern: "§7[§bTeam§7]§r {DISPLAY_NAME}: {MESSAGE}"
+  toggleMessage: "Toggled auto chat for TeamChat"
+
+LeadChat:
+  pattern: "§7[§cLeitung§7]§r {DISPLAY_NAME}: {MESSAGE}"
+  toggleMessage: "Toggled auto chat for LeadChat"
+
