@@ -1,9 +1,8 @@
 name: TeamChat
 main: de.maurice.teamchat.Main
 version: 1
-api-version: 1.19
-author: Maurice
-website: www.exo-world.de
+api-version: 1.21.3
+author: Maurice_009
 
 commands:
   teamchat:
