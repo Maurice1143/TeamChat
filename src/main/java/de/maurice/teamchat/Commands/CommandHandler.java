@@ -18,8 +18,7 @@ public class CommandHandler implements CommandExecutor, TabCompleter {
 
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, String[] args) {
-        if(!(sender instanceof Player)) return false;
-        Player player = (Player) sender;
+        if(!(sender instanceof Player player)) return false;
 
         TeamChatManager tcm = TeamChatManager.getInstance();
         if (command.getName().equals("teamchat") || command.getName().equals("leadchat")) {
@@ -39,7 +38,7 @@ public class CommandHandler implements CommandExecutor, TabCompleter {
             }
         } else if (command.getName().equals("teamchatreload") && args.length == 0) {
             Settings.reloadConfig();
-            sender.sendMessage("§7[§bTeamChat-Plugin§7] §6Die Config wurde erfolgreich neu geladen.");
+            sender.sendMessage("§7[§bTeamChat-Plugin§7] §6The config was successfully reloaded! ");
             return true;
         }
 

@@ -1,7 +1,7 @@
 name: TeamChat
 main: de.maurice.teamchat.Main
-version: '${project.version}'
-api-version: 1.21.3
+version: '1.0.3'
+api-version: 1.21.4
 author: Maurice_009
 
 commands:
